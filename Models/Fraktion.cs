@@ -8,5 +8,7 @@
 
         public string IconDirection { get; set; }
 
+        public virtual ICollection<Question> Questions{ get; set; }
+
     }
 }

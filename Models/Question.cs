@@ -20,6 +20,6 @@
 
         public bool Access { get; set; }
 
-        public List<NNQF> NNQFS { get; } = new();
+        public virtual ICollection<Fraktion> Fraktions { get; set; }
     }
 }

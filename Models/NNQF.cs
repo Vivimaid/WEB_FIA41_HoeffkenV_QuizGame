@@ -7,5 +7,12 @@
         public int FID { get; set; }
 
         public int KID { get; set; }
+
+        public List<Fraktion> Fraktions { get; } = new();
+
+        public List<Question> Questions { get; } = new();
+        public Question Question { get; set; }
+
+        public Fraktion Fraktion { get; set; }
     }
 }

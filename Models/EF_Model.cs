@@ -25,6 +25,13 @@ namespace Web_Fia41_HoeffkenV_Web_QuizGame.Models
         // special "local" folder for your platform.
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite($"Data Source={DbPath}");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            modelBuilder.Entity<Question>()
+                .HasMany<Fraktion>(s => s.Fraktions)
+                .WithMany(c => c.Questions);
+                
+        }
     }
 
     
